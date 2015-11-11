@@ -12,6 +12,12 @@ $continue = false;
 $continueURL = "";
 $page = 0;
 
+// Init array with header
+$header['name'] = "Name";
+$header['profile'] = "Profile URL";
+$header['picture'] = "Picture URL";
+$comments[] = $header;
+
 do {
 	echo $page++;
 
@@ -45,3 +51,13 @@ do {
 } while ($continue);
 
 print_r($comments);
+
+
+// Save as a CSV file
+$fp = fopen('database.csv', 'w');
+
+foreach ($comments as $campos) {
+    fputcsv($fp, $campos, ";");
+}
+
+fclose($fp);
