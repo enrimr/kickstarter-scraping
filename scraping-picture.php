@@ -1,4 +1,5 @@
 <?php
+//https://www.kickstarter.com/projects/273274561/rekonect-notebook-the-magnetic-lifestyle/checkouts/51389755/thanks?event=create&recs=true
 include_once("simple_html_dom.php");
 //-------------------
 //set POST variables
@@ -24,11 +25,24 @@ $result = curl_exec($ch);
 
 var_dump($ch);
 
-$http_response_code = curl_getinfo($ch, CURLINFO_REDIRECT_URL);
+$http_redirect_url = curl_getinfo($ch, CURLINFO_REDIRECT_URL);
 
-$lal = file_get_html($http_response_code);
-echo "\n\n --- \n";
-echo $lal->find('.search-details')->innertext;
+$lal = file_get_html($http_redirect_url);
+echo "\n\n --- -- \n";
+foreach ($lal->find('.matches div div') as $searchResult) {
+	echo "\n\n\n ===\n";
+	//echo $searchResult;
+	$title = $searchResult->find('div div h4', 0)->innertext;
+	if (strcmp("twitter.com", $title) == 0) {
+		print_r("$title\n");
+
+		$url = $searchResult->find('div div h4', 0)->innertext;
+
+		foreach ($$searchResult->find('p') as $paragraph) {
+			echo $paragraph;
+		}
+	}
+}
 
 //close connection
 curl_close($ch);
