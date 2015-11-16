@@ -1,5 +1,6 @@
 <?php
 include_once("simple_html_dom.php");
+include_once("scraping-picture.php");
 
 $prefix = 'https://www.kickstarter.com';
 
@@ -41,6 +42,8 @@ foreach ($projects as $projectName => $projectURL) {
 		    $item['name'] = $comment->find('.author', 0)->innertext;
 		    $item['profile'] = str_replace("amp;", "", $prefix.$comment->find('.author', 0)->href);
 		    $item['picture'] = str_replace("amp;", "", $comment->find('img', 0)->src);
+
+		    $resultForPicture = getInfoFromPicture($item['picture']);
 
 		    if (!in_array($item, $comments)){
 		    	$comments[] = $item;
