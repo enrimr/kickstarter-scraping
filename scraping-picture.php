@@ -1,8 +1,17 @@
 <?php
 //https://www.kickstarter.com/projects/273274561/rekonect-notebook-the-magnetic-lifestyle/checkouts/51389755/thanks?event=create&recs=true
+//http://tineye.com/search/0c515394065851b644c549612a05cf83606c7d6d?domain=wix.com&sort=score&order=asc
+
+//http://www.jacobward.co.uk/using-proxies-for-scraping-with-php-curl/
+
 include_once("simple_html_dom.php");
+include_once("proxy.php");
 
 function getInfoFromPicture($picture){
+
+	// create the context...
+	$context = stream_context_create($opts);
+
 	//set POST variables
 	$url = 'https://www.tineye.com/search';
 	$fields = array(
@@ -17,21 +26,41 @@ function getInfoFromPicture($picture){
 	//open connection
 	$ch = curl_init();
 
+	$proxy = getProxy();
+	$proxyauth = 'enrimr17dec:dog';
+
+	echo "\n\n\n PROXY: ".$proxy."\n\n\n";
+
 	//set the url, number of POST vars, POST data
 	curl_setopt($ch,CURLOPT_URL, $url);
 	curl_setopt($ch,CURLOPT_POST, count($fields));
 	curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
 
+	curl_setopt($ch, CURLOPT_PROXY, $proxy);
+	curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_HEADER, 1);
+
 	//execute post
 	$result = curl_exec($ch);
 
-	var_dump($ch);
+	var_dump($result);
 
 	$http_redirect_url = curl_getinfo($ch, CURLINFO_REDIRECT_URL);
 
-	$lal = file_get_html($http_redirect_url);
+	if ($http_redirect_url){
+		$web = file_get_html($http_redirect_url);
+	} else {
+		$web = str_get_html($result);
+	}
+
+
+	echo "-----> ".$http_redirect_url;
+
+
 	echo "\n\n --- -- \n";
-	foreach ($lal->find('.matches div div') as $searchResult) {
+	foreach ($web->find('.matches div div') as $searchResult) {
 		//echo $searchResult;
 		$result = $searchResult->find('div div h4', 0);
 		if ($result) {
