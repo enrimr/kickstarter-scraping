@@ -7,10 +7,26 @@
 include_once("simple_html_dom.php");
 include_once("proxy.php");
 
-function getInfoFromPicture($picture){
+// TWITTER CHECK
+function isTwitterStatus($url){
+	$pos = stripos($url, "status");
+	return $pos !== false;
+}
+function isTwitterProfile($url){
+	$pos = substr_count($url, '/');
+	return $pos <= 3;
+}
 
-	// create the context...
-	$context = stream_context_create($opts);
+function isTwitterPictureProfile($picture, $url){
+	$web = file_get_html($url);
+	$profileAvatarContainer = $web->find('.ProfileAvatar-container', 0);
+	$pos = strpos($profileAvatarContainer->href, $picture);
+	return $pos !== false;
+}
+
+
+// MAIN
+function getInfoFromPicture($picture){
 
 	//set POST variables
 	$url = 'https://www.tineye.com/search';
@@ -85,8 +101,21 @@ function getInfoFromPicture($picture){
 						$pos = strpos($pContent, "age: "); // Si buscamos Image: nos da 0 que es === false
 						if ($pos !== false){
 							$link = $paragraph->find('a', 0)->title;
-							echo "\nLink: ".$link;
 							$pages[] = $link;
+
+							if (isTwitterStatus($link)){
+								echo "\n > Status: $link";
+							} else if (isTwitterProfile($link)){
+								echo "\n > Profile: $link";
+								if (isTwitterPictureProfile($userImage,$link)){
+
+									if (!isset($oneResult['twitter'])){
+										$oneResult['twitter'] = $link;
+									}
+								}
+							} else {
+								echo "\n > Other: $link";
+							}
 						} 
 					}
 				}
@@ -94,8 +123,9 @@ function getInfoFromPicture($picture){
 				$oneResult['website']=$title;
 				$oneResult['imageURL']=$userImage;
 				$oneResult['links']=$pages;
-				$results[] = $oneResult;
+				
 			}
+			$results[] = $oneResult;
 		} else {
 	    	// handle this situation
 		}
@@ -108,6 +138,10 @@ function getInfoFromPicture($picture){
 	return $results;
 }
 
-//$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/59676/bill_avatar_full_size.original.jpg?v=1425468393&w=40&h=40&fit=crop&auto=format&q=92&s=ddaafe3577ea638451801eb02af63592");
 
-//print_r($toPrint);
+
+//$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/59676/bill_avatar_full_size.original.jpg?v=1425468393&w=40&h=40&fit=crop&auto=format&q=92&s=ddaafe3577ea638451801eb02af63592");
+//https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg
+$toPrint = getInfoFromPicture("https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg");
+echo "\n";
+print_r($toPrint);
