@@ -2,6 +2,11 @@
 include_once("simple_html_dom.php");
 include_once("scraping-picture.php");
 
+function isRealPicture($pictureIn){
+	$pos = strpos($pictureIn, "missing_user_avatar.png");
+	return $pos;
+}
+
 $prefix = 'https://www.kickstarter.com';
 
 $projects = array(
@@ -42,8 +47,11 @@ foreach ($projects as $projectName => $projectURL) {
 		    $item['name'] = $comment->find('.author', 0)->innertext;
 		    $item['profile'] = str_replace("amp;", "", $prefix.$comment->find('.author', 0)->href);
 		    $item['picture'] = str_replace("amp;", "", $comment->find('img', 0)->src);
-
-		    $resultForPicture = getInfoFromPicture($item['picture']);
+			if (isRealPicture($item['picture'])){
+				$item['picture'] = "";
+			} else {
+				//$resultForPicture = getInfoFromPicture($item['picture']);
+			}
 
 		    if (!in_array($item, $comments)){
 		    	$comments[] = $item;
