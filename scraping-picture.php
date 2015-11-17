@@ -24,9 +24,41 @@ function isTwitterPictureProfile($picture, $url){
 	return $pos !== false;
 }
 
+function getProfileFromTwitterStatusComment($picture, $url){
+	//4iv1lsmqhrav3n4voli0_bigger.jpeg
+	//stream-item-header
+	$web = file_get_html($url);
+	foreach ($web->find('.stream-item-header') as $comment) {
+		$imgSrc = $comment->find('a img',0)->src;
+
+		$pos = strpos($imgSrc, $picture);
+		if ($pos){
+
+			$twitterProfile = $comment->find('a',0)->href;
+			return $twitterProfile;
+		}
+	}
+	return false;
+}
+function getProfileFromTwitterStatusFavorite($picture, $url){
+	$web = file_get_html($url);
+	foreach ($web->find('.avatar-row')->find('.stream-item-header') as $comment) {
+		$imgSrc = $comment->find('a img',0)->src;
+
+		$pos = strpos($imgSrc, $picture);
+		if ($pos){
+
+			$twitterProfile = $comment->find('a',0)->href;
+			return $twitterProfile;
+		}
+	}
+	return false;
+}
 
 // MAIN
 function getInfoFromPicture($picture){
+
+	$results = null;
 
 	//set POST variables
 	$url = 'https://www.tineye.com/search';
@@ -105,12 +137,32 @@ function getInfoFromPicture($picture){
 
 							if (isTwitterStatus($link)){
 								echo "\n > Status: $link";
+
+								$twitterProfile = getProfileFromTwitterStatusComment($userImage, $link);
+								if ($twitterProfile){
+									if (!isset($oneResult['twitter'])){
+										$oneResult['twitter'] = "http://twitter.com".$twitterProfile;;
+									} else {
+										$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;;
+									}
+								} else {
+									$twitterProfile = getProfileFromTwitterStatusFavorite($userImage, $link);
+									if ($twitterProfile){
+										if (!isset($oneResult['twitter'])){
+											$oneResult['twitter'] = "http://twitter.com".$twitterProfile;;
+										} else {
+											$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;;
+										}
+									}
+								}
 							} else if (isTwitterProfile($link)){
 								echo "\n > Profile: $link";
-								if (isTwitterPictureProfile($userImage,$link)){
+								if (isTwitterPictureProfile($userImage, $link)){
 
 									if (!isset($oneResult['twitter'])){
 										$oneResult['twitter'] = $link;
+									} else {
+										$oneResult['twitter_other'][] = $link;
 									}
 								}
 							} else {
@@ -123,9 +175,12 @@ function getInfoFromPicture($picture){
 				$oneResult['website']=$title;
 				$oneResult['imageURL']=$userImage;
 				$oneResult['links']=$pages;
-				
+
+				if (!in_array($item, $results)){
+		    		$results[] = $oneResult;
+				}
 			}
-			$results[] = $oneResult;
+			
 		} else {
 	    	// handle this situation
 		}
@@ -142,6 +197,6 @@ function getInfoFromPicture($picture){
 
 //$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/59676/bill_avatar_full_size.original.jpg?v=1425468393&w=40&h=40&fit=crop&auto=format&q=92&s=ddaafe3577ea638451801eb02af63592");
 //https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg
-$toPrint = getInfoFromPicture("https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg");
-echo "\n";
-print_r($toPrint);
+//$toPrint = getInfoFromPicture("https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg");
+//echo "\n";
+//print_r($toPrint);

@@ -14,6 +14,7 @@ function getProxy(){
 	$proxies[] = '111.13.12.216:80';
 	$proxies[] = '221.212.74.203:1818'; // Some proxies require IP and port number
 	$proxies[] = '27.122.12.45:3128';*/
+	
 	$proxies[] = '149.255.107.87:80';
 	$proxies[] = '78.110.163.108:80';
 	$proxies[] = '23.239.64.40:80';
