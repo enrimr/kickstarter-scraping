@@ -6,6 +6,33 @@
 
 include_once("simple_html_dom.php");
 include_once("tor.php");
+include_once("proxy.php");
+
+// FORUMS.OVERCLOCKERSCLUB.COM
+
+function getOverclockersClubProfileUrl($picture, $url){
+	$web = file_get_html($url);
+	foreach ($web->find('.basic_info .avatar a') as $user) {
+		$imgSrc = $user->find('img',0)->src;
+
+		$pos = strpos($imgSrc, $picture);
+		if ($pos){
+			$userProfileUrl = $user->href;
+			return $userProfileUrl;
+		}
+	}
+	return false;
+}
+function getOverclockersClubProfileTwitter($url){
+	$web = file_get_html($url);
+	foreach ($web->find('#custom_fields_social ul li') as $object) {
+		$socialType = $object->find('.row_title',0)->innertext;
+		if (strcmp("Twitter", $socialType) == 0){
+			return $socialType = $object->find('.row_data',0)->innertext;;
+		}
+	}
+	return false;
+}
 
 // TWITTER CHECK
 function isTwitterStatus($url){
@@ -74,7 +101,7 @@ function getInfoFromPicture($picture){
 	//open connection
 	$ch = curl_init();
 
-	/*//$proxy = getProxy();
+	$proxy = getProxy();
 	//$proxyauth = 'enrimr17dec:dog';
 
 	//echo "\n\n\n PROXY CANDIDATE: ".$proxy."\n\n\n";
@@ -88,11 +115,11 @@ function getInfoFromPicture($picture){
 	//curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_HEADER, 1);*/
+	curl_setopt($ch, CURLOPT_HEADER, 1);
 
 	//execute post
-	sleep(15);
-	$ch = getCurlConfiguration($url, true, $fields, $fields_string);
+	//sleep(15);
+	//$ch = getCurlConfiguration($url, true, $fields, $fields_string);
 
 	$result = curl_exec($ch);
 	//var_dump($result);

@@ -2,7 +2,7 @@
 //http://proxylist.hidemyass.com/search-1305869#listable
 
 function getProxy(){
-	$range = 30;
+	$range = 20;
 	static $counter = 0;
 	static $globalCounter = 0;
 	$proxies = array(); // Declaring an array to store the proxy list
