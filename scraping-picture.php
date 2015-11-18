@@ -77,7 +77,7 @@ function getInfoFromPicture($picture){
 	$proxy = getProxy();
 	$proxyauth = 'enrimr17dec:dog';
 
-	echo "\n\n\n PROXY: ".$proxy."\n\n\n";
+	//echo "\n\n\n PROXY CANDIDATE: ".$proxy."\n\n\n";
 
 	//set the url, number of POST vars, POST data
 	curl_setopt($ch,CURLOPT_URL, $url);
@@ -85,7 +85,7 @@ function getInfoFromPicture($picture){
 	curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
 
 	curl_setopt($ch, CURLOPT_PROXY, $proxy);
-	curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+	//curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_HEADER, 1);
@@ -93,98 +93,106 @@ function getInfoFromPicture($picture){
 	//execute post
 	$result = curl_exec($ch);
 
-	var_dump($result);
+	//var_dump($result);
 
 	$http_redirect_url = curl_getinfo($ch, CURLINFO_REDIRECT_URL);
 
+	//var_dump($http_redirect_url);
+
 	if ($http_redirect_url){
 		$web = file_get_html($http_redirect_url);
+		var_dump($http_redirect_url);
 	} else {
 		$web = str_get_html($result);
 	}
 
 
-	echo "-----> ".$http_redirect_url;
+	//echo "-----> ".$http_redirect_url;
 
 
-	echo "\n\n --- -- \n";
-	foreach ($web->find('.matches div div') as $searchResult) {
-		//echo $searchResult;
-		$result = $searchResult->find('div div h4', 0);
-		if ($result) {
-	    	$title = $result->innertext;
-	    	if (strcmp("twitter.com", $title) == 0) {
-				print_r("Web: $title\n");
+	if ($web){
+		echo "\n > PROXY: $proxy\n";
+		foreach ($web->find('.matches div div') as $searchResult) {
+			//echo $searchResult;
+			$result = $searchResult->find('div div h4', 0);
+			if ($result) {
+		    	$title = $result->innertext;
+		    	if (strcmp("twitter.com", $title) == 0) {
+					print_r("Web: $title\n");
 
-				$url = $searchResult->find('div div h4', 0)->innertext;
+					$url = $searchResult->find('div div h4', 0)->innertext;
 
-				$userImage = "";
-				foreach ($searchResult->find('p') as $paragraph) {
+					$userImage = "";
+					$twitterProfile = null;
+					$oneResult = array();
 
-					$pContent = $paragraph->innertext;
+					foreach ($searchResult->find('p') as $paragraph) {
 
-					// Check if it is a image
-					$pos = strpos($pContent, "mage: "); // Si buscamos Image: nos da 0 que es === false
-					if ($pos !== false){
-						$userImage = $paragraph->find('a', 0)->title;
-						echo "\nImage: ".$userImage;
-					} else {
-						// Check if it is a link
-						$pos = strpos($pContent, "age: "); // Si buscamos Image: nos da 0 que es === false
+						$pContent = $paragraph->innertext;
+
+						// Check if it is a image
+						$pos = strpos($pContent, "mage: "); // Si buscamos Image: nos da 0 que es === false
 						if ($pos !== false){
-							$link = $paragraph->find('a', 0)->title;
-							$pages[] = $link;
+							$userImage = $paragraph->find('a', 0)->title;
+							echo "\nImage: ".$userImage;
+						} else {
+							// Check if it is a link
+							$pos = strpos($pContent, "age: "); // Si buscamos Image: nos da 0 que es === false
+							if ($pos !== false){
+								$link = $paragraph->find('a', 0)->title;
+								$pages[] = $link;
 
-							if (isTwitterStatus($link)){
-								echo "\n > Status: $link";
+								if (isTwitterStatus($link)){
+									echo "\n > Status: $link";
 
-								$twitterProfile = getProfileFromTwitterStatusComment($userImage, $link);
-								if ($twitterProfile){
-									if (!isset($oneResult['twitter'])){
-										$oneResult['twitter'] = "http://twitter.com".$twitterProfile;;
-									} else {
-										$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;;
-									}
-								} else {
-									$twitterProfile = getProfileFromTwitterStatusFavorite($userImage, $link);
+									$twitterProfile = getProfileFromTwitterStatusComment($userImage, $link);
 									if ($twitterProfile){
 										if (!isset($oneResult['twitter'])){
 											$oneResult['twitter'] = "http://twitter.com".$twitterProfile;;
 										} else {
 											$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;;
 										}
-									}
-								}
-							} else if (isTwitterProfile($link)){
-								echo "\n > Profile: $link";
-								if (isTwitterPictureProfile($userImage, $link)){
-
-									if (!isset($oneResult['twitter'])){
-										$oneResult['twitter'] = $link;
 									} else {
-										$oneResult['twitter_other'][] = $link;
+										$twitterProfile = getProfileFromTwitterStatusFavorite($userImage, $link);
+										if ($twitterProfile){
+											if (!isset($oneResult['twitter'])){
+												$oneResult['twitter'] = "http://twitter.com".$twitterProfile;;
+											} else {
+												$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;;
+											}
+										}
 									}
+								} else if (isTwitterProfile($link)){
+									echo "\n > Profile: $link";
+									if (isTwitterPictureProfile($userImage, $link)){
+
+										if (!isset($oneResult['twitter'])){
+											$oneResult['twitter'] = $link;
+										} else {
+											$oneResult['twitter_other'][] = $link;
+										}
+									}
+								} else {
+									echo "\n > Other: $link";
 								}
-							} else {
-								echo "\n > Other: $link";
-							}
-						} 
+							} 
+						}
+					}
+
+					$oneResult['website']=$title;
+					$oneResult['imageURL']=$userImage;
+					$oneResult['links']=$pages;
+
+					if (!in_array($item, $results)){
+			    		$results[] = $oneResult;
 					}
 				}
-
-				$oneResult['website']=$title;
-				$oneResult['imageURL']=$userImage;
-				$oneResult['links']=$pages;
-
-				if (!in_array($item, $results)){
-		    		$results[] = $oneResult;
-				}
+				
+			} else {
+		    	// handle this situation
 			}
 			
-		} else {
-	    	// handle this situation
 		}
-		
 	}
 
 	//close connection

@@ -56,6 +56,10 @@ foreach ($projects as $projectName => $projectURL) {
 						$item['twitter'] = $resultForPicture[0]['twitter'];
 					}
 
+					if (isset($resultForPicture[0]['twitter_other'])){
+						$item['twitter_other'] = $resultForPicture[0]['twitter_other'];
+					}
+
 				}
 			}
 
