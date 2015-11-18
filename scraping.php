@@ -31,9 +31,6 @@ foreach ($projects as $projectName => $projectURL) {
 	// Create DOM from URL
 	$html = file_get_html($prefix.$projectURL.'/comments');
 
-	//print_r($html);
-	//var_dump($html->find('.older_commentssafdsf'));
-
 	$continue = false;
 	$continueURL = "";
 	$page = 0;
@@ -45,6 +42,7 @@ foreach ($projects as $projectName => $projectURL) {
 		foreach($html->find('.comments .comment') as $comment) {
 			$item['project'] = $projectName;
 		    $item['name'] = $comment->find('.author', 0)->innertext;
+		    echo "\n ] ".$item['name'];
 		    $item['profile'] = str_replace("amp;", "", $prefix.$comment->find('.author', 0)->href);
 		    $item['picture'] = str_replace("amp;", "", $comment->find('img', 0)->src);
 			if (isRealPicture($item['picture'])){
@@ -87,7 +85,7 @@ foreach ($projects as $projectName => $projectURL) {
 
 //print_r($comments);
 
-$fp = fopen('database_b.csv', 'w');
+$fp = fopen('database.csv', 'w');
 
 foreach ($comments as $item) {
     fputcsv($fp, $item, ";");

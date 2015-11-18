@@ -5,7 +5,7 @@
 //http://www.jacobward.co.uk/using-proxies-for-scraping-with-php-curl/
 
 include_once("simple_html_dom.php");
-include_once("proxy.php");
+include_once("tor.php");
 
 // TWITTER CHECK
 function isTwitterStatus($url){
@@ -72,7 +72,7 @@ function getInfoFromPicture($picture){
 	rtrim($fields_string, '&');
 
 	//open connection
-	$ch = curl_init();
+	/*$ch = curl_init();
 
 	$proxy = getProxy();
 	$proxyauth = 'enrimr17dec:dog';
@@ -88,15 +88,16 @@ function getInfoFromPicture($picture){
 	//curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_HEADER, 1);
+	curl_setopt($ch, CURLOPT_HEADER, 1);*/
 
 	//execute post
-	$result = curl_exec($ch);
+	sleep(3);
+	$ch = getCurlConfiguration($url, true, $fields, $fields_string);
 
+	$result = curl_exec($ch);
 	//var_dump($result);
 
 	$http_redirect_url = curl_getinfo($ch, CURLINFO_REDIRECT_URL);
-
 	//var_dump($http_redirect_url);
 
 	if ($http_redirect_url){
@@ -106,12 +107,8 @@ function getInfoFromPicture($picture){
 		$web = str_get_html($result);
 	}
 
-
-	//echo "-----> ".$http_redirect_url;
-
-
 	if ($web){
-		echo "\n > PROXY: $proxy\n";
+		//echo "\n > PROXY: $proxy\n";
 		foreach ($web->find('.matches div div') as $searchResult) {
 			//echo $searchResult;
 			$result = $searchResult->find('div div h4', 0);
@@ -186,6 +183,9 @@ function getInfoFromPicture($picture){
 					if (!in_array($item, $results)){
 			    		$results[] = $oneResult;
 					}
+				} else {
+
+					echo " - OTHER TITLE: $title";
 				}
 				
 			} else {

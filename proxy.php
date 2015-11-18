@@ -7,7 +7,7 @@ function getProxy(){
 	static $globalCounter = 0;
 	$proxies = array(); // Declaring an array to store the proxy list
  
-	// Adding list of proxies to the $proxies array
+	// Adding list of proxies to the $proxies array pass enrimr17dec:dog
 	/*$proxies[] = '149.255.107.87:80';
 	$proxies[] = '78.110.163.108:80';
 	$proxies[] = '23.239.64.40:80';

@@ -1,5 +1,5 @@
 <?php
-function getWeb($url){
+function getCurlConfiguration($url, $post = false, $fields = null, $fields_string = ""){
 
 	$ip = '127.0.0.1';
 	$port = '9051';
@@ -13,10 +13,10 @@ function getWeb($url){
 	} else {
 	    fwrite($fp,"AUTHENTICATE \"".$auth."\"\n");
 	    $received = fread($fp,512);
-	    echo " > 1. $received";
+	    //echo " > 1. $received";
 	    fwrite($fp,$command."\n");
 	    $received = fread($fp,512);
-	    echo " > 2. $received";
+	    //echo " > 2. $received";
 	}
 	 
 	fclose($fp);
@@ -27,11 +27,18 @@ function getWeb($url){
 	curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_VERBOSE, 0);
-	$response = curl_exec($ch);
-	echo $response;
 
-	return $response;
+	if ($post){
+		//set the url, number of POST vars, POST data
+		curl_setopt($ch,CURLOPT_POST, count($fields));
+		curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+	}
+
+	$response = curl_exec($ch);
+	//echo $response;
+
+	return $ch;
 }
 
-$web = getWeb("http://whatismyip.org");
-echo $web;
+//$web = getWeb("http://whatismyip.org");
+//echo $web;
