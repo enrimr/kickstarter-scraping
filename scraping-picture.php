@@ -9,14 +9,19 @@ include_once("tor.php");
 include_once("proxy.php");
 
 // FORUMS.OVERCLOCKERSCLUB.COM
-
+function isOverclockersShowtopic($url){
+	$pos = stripos($url, "showtopic");
+	return $pos !== false;
+}
 function getOverclockersClubProfileUrl($picture, $url){
 	$web = file_get_html($url);
 	foreach ($web->find('.basic_info .avatar a') as $user) {
+
 		$imgSrc = $user->find('img',0)->src;
 
 		$pos = strpos($imgSrc, $picture);
 		if ($pos){
+
 			$userProfileUrl = $user->href;
 			return $userProfileUrl;
 		}
@@ -25,6 +30,7 @@ function getOverclockersClubProfileUrl($picture, $url){
 }
 function getOverclockersClubProfileTwitter($url){
 	$web = file_get_html($url);
+
 	foreach ($web->find('#custom_fields_social ul li') as $object) {
 		$socialType = $object->find('.row_title',0)->innertext;
 		if (strcmp("Twitter", $socialType) == 0){
@@ -136,8 +142,9 @@ function getInfoFromPicture($picture){
 
 	if ($web){
 		//echo "\n > PROXY: $proxy\n";
+		$results = array();
 		foreach ($web->find('.matches div div') as $searchResult) {
-			echo $searchResult;
+			//echo $searchResult;
 			$result = $searchResult->find('div div h4', 0);
 			if ($result) {
 		    	$title = $result->innertext;
@@ -207,12 +214,61 @@ function getInfoFromPicture($picture){
 					$oneResult['imageURL']=$userImage;
 					$oneResult['links']=$pages;
 
-					if (!in_array($item, $results)){
+					if (!in_array($oneResult, $results)){
+			    		$results[] = $oneResult;
+					}
+				} else if (strcmp("forums.overclockersclub.com", $title) == 0) {
+					print_r("Web: $title\n");
+
+					$url = $searchResult->find('div div h4', 0)->innertext;
+
+					$userImage = "";
+					$twitterProfile = null;
+					$oneResult = array();
+
+					foreach ($searchResult->find('p') as $paragraph) {
+
+						$pContent = $paragraph->innertext;
+
+						// Check if it is a image
+						$pos = strpos($pContent, "mage: "); // Si buscamos Image: nos da 0 que es === false
+						if ($pos !== false){
+							$userImage = $paragraph->find('a', 0)->title;
+							echo "\nImage: ".$userImage;
+						} else {
+							// Check if it is a link
+							$pos = strpos($pContent, "age: "); // Si buscamos Image: nos da 0 que es === false
+							if ($pos !== false){
+								$link = $paragraph->find('a', 0)->title;
+								$pages[] = $link;
+								if (isOverclockersShowtopic($link)){
+									$profileUrl = getOverclockersClubProfileUrl($userImage,$link);
+									if ($profileUrl !== false){
+										$twitterProfile = getOverclockersClubProfileTwitter($profileUrl);
+
+										if ($twitterProfile !== false){
+											if (!isset($oneResult['twitter'])){
+												$oneResult['twitter'] = "http://twitter.com/".trim($twitterProfile);
+											} else {
+												$oneResult['twitter_other'][] = "http://twitter.com/".trim($twitterProfile);
+											}
+										}
+
+									}
+								}
+							} 
+						}
+					}
+
+					$oneResult['website']=$title;
+					$oneResult['imageURL']=$userImage;
+					$oneResult['links']=$pages;
+
+					if (!in_array($oneResult, $results)){
 			    		$results[] = $oneResult;
 					}
 				} else {
-
-					echo " - OTHER TITLE: $title";
+					echo "\n\n - OTHER TITLE: $title\n";
 				}
 				
 			} else {
@@ -233,6 +289,6 @@ function getInfoFromPicture($picture){
 //$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/59676/bill_avatar_full_size.original.jpg?v=1425468393&w=40&h=40&fit=crop&auto=format&q=92&s=ddaafe3577ea638451801eb02af63592");
 //https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg
 //$toPrint = getInfoFromPicture("https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg");
-//$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/1894523/image.original.jpg?v=1419038404&w=80&h=80&fit=crop&auto=format&q=92&s=1cad84cbceaa7208a8801a69b2e52a09");
-//echo "\n";
-//print_r($toPrint);
+$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/917635/greeny_white_background.original.PNG?v=1392304916&w=80&h=80&fit=crop&auto=format&q=92&s=118595030cd26f947d53a695c73c8963");
+echo "\n";
+print_r($toPrint);
