@@ -4,7 +4,7 @@ include_once("scraping-picture.php");
 
 function isRealPicture($pictureIn){
 	$pos = strpos($pictureIn, "missing_user_avatar.png");
-	return $pos;
+	return $pos !== false;
 }
 
 $prefix = 'https://www.kickstarter.com';
@@ -27,6 +27,10 @@ $header['profile'] = "Kickstarter Profile URL";
 $header['picture'] = "Picture URL";
 $comments[] = $header;
 
+// Add header to CSV file
+$fp = fopen('database.csv', 'w');
+fputcsv($fp, $header, ";");
+
 foreach ($projects as $projectName => $projectURL) {
 	// Create DOM from URL
 	$html = file_get_html($prefix.$projectURL.'/comments');
@@ -34,41 +38,53 @@ foreach ($projects as $projectName => $projectURL) {
 	$continue = false;
 	$continueURL = "";
 	$page = 0;
-
+	$counter = 0;
 	do {
 		echo $page++;
 
 		// Find all article blocks
 		foreach($html->find('.comments .comment') as $comment) {
+			$item = array();
 			$item['project'] = $projectName;
 		    $item['name'] = $comment->find('.author', 0)->innertext;
-		    echo "\n ] ".$item['name'];
 		    $item['profile'] = str_replace("amp;", "", $prefix.$comment->find('.author', 0)->href);
 		    $item['picture'] = str_replace("amp;", "", $comment->find('img', 0)->src);
-			if (isRealPicture($item['picture'])){
+		    if (isRealPicture($item['picture'])){
 				$item['picture'] = "";
-			} else {
-				$resultForPicture = getInfoFromPicture($item['picture']);
-				if ($resultForPicture){
-					if (isset($resultForPicture[0]['twitter'])){
-						$item['twitter'] = $resultForPicture[0]['twitter'];
-					}
-
-					if (isset($resultForPicture[0]['twitter_other'])){
-						$item['twitter_other'] = $resultForPicture[0]['twitter_other'];
-					}
-
-				}
-			}
+				$itemSocial = $item;
+			} 
+		    $itemSocial = $item;
 
 		    if (!in_array($item, $comments)){
+		    	if ($counter > 50) {return;}
+		    	
+		    	echo "\n ] ".$item['name'];
+		    	if (strcmp($item['picture'], "") !== 0){
+					echo "\n     - picture = ".$item['picture'];
+					$resultForPicture = getInfoFromPicture($item['picture']);
+					if ($resultForPicture){
+						if (isset($resultForPicture[0]['twitter'])){
+							$itemSocial['twitter'] = $resultForPicture[0]['twitter'];
+						}
+
+						if (isset($resultForPicture[0]['twitter_other'])){
+							$itemSocial['twitter_other'] = $resultForPicture[0]['twitter_other'];
+						}
+
+					}
+				}
+
 		    	$comments[] = $item;
+		    	$itemSocials[] = $itemSocial;
+		    	fputcsv($fp, $itemSocial, ";");
+			} else {
+				
 			}
 		}
 
 		$continueURL = $html->find('.older_comments', 0)->href;
 
-		if (strcmp("",$continueURL) !== 0){
+		if (strcmp("", $continueURL) !== 0){
 			echo "\nOlder comments URL: ".$prefix.$continueURL."\n\n";
 
 			// Update the url to get
@@ -85,10 +101,10 @@ foreach ($projects as $projectName => $projectURL) {
 
 //print_r($comments);
 
-$fp = fopen('database.csv', 'w');
 
-foreach ($comments as $item) {
+
+/*foreach ($comments as $item) {
     fputcsv($fp, $item, ";");
-}
+}*/
 
 fclose($fp);

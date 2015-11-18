@@ -27,6 +27,7 @@ function getCurlConfiguration($url, $post = false, $fields = null, $fields_strin
 	curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_VERBOSE, 0);
+	curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
 
 	if ($post){
 		//set the url, number of POST vars, POST data
@@ -35,7 +36,7 @@ function getCurlConfiguration($url, $post = false, $fields = null, $fields_strin
 	}
 
 	$response = curl_exec($ch);
-	//echo $response;
+	echo $response;
 
 	return $ch;
 }

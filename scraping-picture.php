@@ -72,10 +72,10 @@ function getInfoFromPicture($picture){
 	rtrim($fields_string, '&');
 
 	//open connection
-	/*$ch = curl_init();
+	$ch = curl_init();
 
-	$proxy = getProxy();
-	$proxyauth = 'enrimr17dec:dog';
+	/*//$proxy = getProxy();
+	//$proxyauth = 'enrimr17dec:dog';
 
 	//echo "\n\n\n PROXY CANDIDATE: ".$proxy."\n\n\n";
 
@@ -91,7 +91,7 @@ function getInfoFromPicture($picture){
 	curl_setopt($ch, CURLOPT_HEADER, 1);*/
 
 	//execute post
-	sleep(3);
+	sleep(15);
 	$ch = getCurlConfiguration($url, true, $fields, $fields_string);
 
 	$result = curl_exec($ch);
@@ -110,7 +110,7 @@ function getInfoFromPicture($picture){
 	if ($web){
 		//echo "\n > PROXY: $proxy\n";
 		foreach ($web->find('.matches div div') as $searchResult) {
-			//echo $searchResult;
+			echo $searchResult;
 			$result = $searchResult->find('div div h4', 0);
 			if ($result) {
 		    	$title = $result->innertext;
@@ -206,5 +206,6 @@ function getInfoFromPicture($picture){
 //$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/59676/bill_avatar_full_size.original.jpg?v=1425468393&w=40&h=40&fit=crop&auto=format&q=92&s=ddaafe3577ea638451801eb02af63592");
 //https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg
 //$toPrint = getInfoFromPicture("https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg");
+//$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/1894523/image.original.jpg?v=1419038404&w=80&h=80&fit=crop&auto=format&q=92&s=1cad84cbceaa7208a8801a69b2e52a09");
 //echo "\n";
 //print_r($toPrint);
