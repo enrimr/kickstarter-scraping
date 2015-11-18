@@ -10,11 +10,11 @@ function isRealPicture($pictureIn){
 $prefix = 'https://www.kickstarter.com';
 
 $projects = array(
-	"SparkPlanner" 				=> "/projects/katemats/the-spark-planner-achieve-all-your-goals-in-2016",
-	"SparkNotebook"				=> "/projects/katemats/spark-notebook-a-place-for-your-life-plans-and-gre",
+	//"SparkPlanner" 				=> "/projects/katemats/the-spark-planner-achieve-all-your-goals-in-2016",
+	"SparkNotebook"				=> "/projects/katemats/spark-notebook-a-place-for-your-life-plans-and-gre");
 	//"PassionPlanner 2013" 		=> "/projects/angeliatrinidad/passion-planner-start-focusing-on-what-really-matt",
 	//"PassionPlanner 2014"		=> "/projects/angeliatrinidad/passion-planner-the-one-place-for-all-your-thought",
-	"PassionPlanner Jun 2015"	=> "/projects/angeliatrinidad/passion-planner-the-life-coach-that-fits-in-your-b");
+	//"PassionPlanner Jun 2015"	=> "/projects/angeliatrinidad/passion-planner-the-life-coach-that-fits-in-your-b");
 	//"PassionPlanner Dec 2015"	=> "/projects/angeliatrinidad/passion-planner-get-one-give-one",
 	//"REconect Notebook"			=> "/projects/273274561/rekonect-notebook-the-magnetic-lifestyle",
 	//"DOO" 						=> "/projects/336837899/my-doo-the-entrepreneurs-journal",
