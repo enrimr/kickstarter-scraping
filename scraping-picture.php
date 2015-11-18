@@ -135,7 +135,7 @@ function getInfoFromPicture($picture){
 
 	if ($http_redirect_url){
 		$web = file_get_html($http_redirect_url);
-		var_dump($http_redirect_url);
+		//var_dump($http_redirect_url);
 	} else {
 		$web = str_get_html($result);
 	}
@@ -269,6 +269,25 @@ function getInfoFromPicture($picture){
 					}
 				} else {
 					echo "\n\n - OTHER TITLE: $title\n";
+
+					foreach ($searchResult->find('p') as $paragraph) {
+
+						$pContent = $paragraph->innertext;
+
+						// Check if it is a image
+						$pos = strpos($pContent, "mage: "); // Si buscamos Image: nos da 0 que es === false
+						if ($pos !== false){
+							$userImage = $paragraph->find('a', 0)->title;
+							echo "\nImage: ".$userImage;
+						} else {
+							// Check if it is a link
+							$pos = strpos($pContent, "age: "); // Si buscamos Image: nos da 0 que es === false
+							if ($pos !== false){
+								$link = $paragraph->find('a', 0)->title;
+								echo "\n\n      + Link: $link\n";
+							}
+						}
+					}
 				}
 				
 			} else {
