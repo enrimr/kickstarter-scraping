@@ -145,6 +145,7 @@ function getInfoFromPicture($picture){
 		$results = array();
 		foreach ($web->find('.matches div div') as $searchResult) {
 			//echo $searchResult;
+			$pages = array();
 			$result = $searchResult->find('div div h4', 0);
 			if ($result) {
 		    	$title = $result->innertext;
@@ -285,8 +286,17 @@ function getInfoFromPicture($picture){
 							if ($pos !== false){
 								$link = $paragraph->find('a', 0)->title;
 								echo "\n\n      + Link: $link\n";
+								$pages[] = $link;
 							}
 						}
+					}
+
+					$oneResult['website']=$title;
+					$oneResult['imageURL']=$userImage;
+					$oneResult['links']=$pages;
+
+					if (!in_array($oneResult, $results)){
+			    		$results[] = $oneResult;
 					}
 				}
 				
@@ -308,6 +318,6 @@ function getInfoFromPicture($picture){
 //$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/59676/bill_avatar_full_size.original.jpg?v=1425468393&w=40&h=40&fit=crop&auto=format&q=92&s=ddaafe3577ea638451801eb02af63592");
 //https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg
 //$toPrint = getInfoFromPicture("https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg");
-$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/917635/greeny_white_background.original.PNG?v=1392304916&w=80&h=80&fit=crop&auto=format&q=92&s=118595030cd26f947d53a695c73c8963");
+$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/1541266/fb_profile_picture.original.jpg?v=1328840454&w=80&h=80&fit=crop&auto=format&q=92&s=85e8a9cfdd9d3e1f0d8253fa3f27f524");
 echo "\n";
 print_r($toPrint);
