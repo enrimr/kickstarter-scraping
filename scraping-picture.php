@@ -40,6 +40,13 @@ function getOverclockersClubProfileTwitter($url){
 	return false;
 }
 
+
+// TUMBLR CHECK
+function isTumblrWeb($url){
+	$pos = stripos($url, "tumblr.com");
+	return $pos !== false;
+}
+
 // TWITTER CHECK
 function isTwitterStatus($url){
 	$pos = stripos($url, "status");
@@ -291,6 +298,9 @@ function getInfoFromPicture($picture){
 						}
 					}
 
+					if (isTumblrWeb($title)){
+						$title = "tumblr.com";
+					}
 					$oneResult['website']=$title;
 					$oneResult['imageURL']=$userImage;
 					$oneResult['links']=$pages;
