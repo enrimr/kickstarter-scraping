@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 include_once("simple_html_dom.php");
 
 $prefix = 'https://www.kickstarter.com';
@@ -19,7 +20,7 @@ for ($userId=60000; $userId < 3000000000; $userId++) {
 			if ($html->find('.no-content')){
 				$continue = false;
 			} else {
-				echo "\nUserId: $userId\n";
+				echo "UserId: $userId\n";
 				$continue = false;
 			}
 		} else {
