@@ -148,7 +148,7 @@ function getInfoFromPicture($picture){
 	}
 
 	if ($web){
-		//echo "\n > PROXY: $proxy\n";
+		echo "\n > > > > > > > PROXY: $proxy\n";
 		$results = array();
 		foreach ($web->find('.matches div div') as $searchResult) {
 			//echo $searchResult;
@@ -187,17 +187,19 @@ function getInfoFromPicture($picture){
 									$twitterProfile = getProfileFromTwitterStatusComment($userImage, $link);
 									if ($twitterProfile){
 										if (!isset($oneResult['twitter'])){
-											$oneResult['twitter'] = "http://twitter.com".$twitterProfile;;
+											$oneResult['twitter'] = "http://twitter.com".$twitterProfile;
+											echo "\n >>>> Twitter User: ".$oneResult['twitter'];
 										} else {
-											$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;;
+											$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;
 										}
 									} else {
 										$twitterProfile = getProfileFromTwitterStatusFavorite($userImage, $link);
 										if ($twitterProfile){
 											if (!isset($oneResult['twitter'])){
-												$oneResult['twitter'] = "http://twitter.com".$twitterProfile;;
+												$oneResult['twitter'] = "http://twitter.com".$twitterProfile;
+												echo "\n >>>> Twitter User: ".$oneResult['twitter'];
 											} else {
-												$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;;
+												$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;
 											}
 										}
 									}
@@ -207,6 +209,7 @@ function getInfoFromPicture($picture){
 
 										if (!isset($oneResult['twitter'])){
 											$oneResult['twitter'] = $link;
+											echo "\n >>>> Twitter User: ".$oneResult['twitter'];
 										} else {
 											$oneResult['twitter_other'][] = $link;
 										}
@@ -226,7 +229,7 @@ function getInfoFromPicture($picture){
 			    		$results[] = $oneResult;
 					}
 				} else if (strcmp("forums.overclockersclub.com", $title) == 0) {
-					print_r("Web: $title\n");
+					//print_r("Web: $title\n");
 
 					$url = $searchResult->find('div div h4', 0)->innertext;
 
@@ -242,7 +245,7 @@ function getInfoFromPicture($picture){
 						$pos = strpos($pContent, "mage: "); // Si buscamos Image: nos da 0 que es === false
 						if ($pos !== false){
 							$userImage = $paragraph->find('a', 0)->title;
-							echo "\nImage: ".$userImage;
+							//echo "\nImage: ".$userImage;
 						} else {
 							// Check if it is a link
 							$pos = strpos($pContent, "age: "); // Si buscamos Image: nos da 0 que es === false
@@ -257,6 +260,7 @@ function getInfoFromPicture($picture){
 										if ($twitterProfile !== false){
 											if (!isset($oneResult['twitter'])){
 												$oneResult['twitter'] = "http://twitter.com/".trim($twitterProfile);
+												echo "\n >>>> Twitter User: ".$oneResult['twitter'];
 											} else {
 												$oneResult['twitter_other'][] = "http://twitter.com/".trim($twitterProfile);
 											}
@@ -286,13 +290,13 @@ function getInfoFromPicture($picture){
 						$pos = strpos($pContent, "mage: "); // Si buscamos Image: nos da 0 que es === false
 						if ($pos !== false){
 							$userImage = $paragraph->find('a', 0)->title;
-							echo "\nImage: ".$userImage;
+							//echo "\nImage: ".$userImage;
 						} else {
 							// Check if it is a link
 							$pos = strpos($pContent, "age: "); // Si buscamos Image: nos da 0 que es === false
 							if ($pos !== false){
 								$link = $paragraph->find('a', 0)->title;
-								echo "\n\n      + Link: $link\n";
+								//echo "\n\n      + Link: $link\n";
 								$pages[] = $link;
 							}
 						}
@@ -328,6 +332,6 @@ function getInfoFromPicture($picture){
 //$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/59676/bill_avatar_full_size.original.jpg?v=1425468393&w=40&h=40&fit=crop&auto=format&q=92&s=ddaafe3577ea638451801eb02af63592");
 //https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg
 //$toPrint = getInfoFromPicture("https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg");
-$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/1541266/fb_profile_picture.original.jpg?v=1328840454&w=80&h=80&fit=crop&auto=format&q=92&s=85e8a9cfdd9d3e1f0d8253fa3f27f524");
-echo "\n";
-print_r($toPrint);
+//$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/1541266/fb_profile_picture.original.jpg?v=1328840454&w=80&h=80&fit=crop&auto=format&q=92&s=85e8a9cfdd9d3e1f0d8253fa3f27f524");
+//echo "\n";
+//print_r($toPrint);

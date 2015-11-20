@@ -10,17 +10,17 @@ function isRealPicture($pictureIn){
 $prefix = 'https://www.kickstarter.com';
 
 $projects = array(
-	//"SparkPlanner" 				=> "/projects/katemats/the-spark-planner-achieve-all-your-goals-in-2016",
-	//"SparkNotebook"				=> "/projects/katemats/spark-notebook-a-place-for-your-life-plans-and-gre",
-	//"PassionPlanner 2013" 		=> "/projects/angeliatrinidad/passion-planner-start-focusing-on-what-really-matt",
-	"PassionPlanner 2014"		=> "/projects/angeliatrinidad/passion-planner-the-one-place-for-all-your-thought");
-	//"PassionPlanner Jun 2015"	=> "/projects/angeliatrinidad/passion-planner-the-life-coach-that-fits-in-your-b");
-	//"PassionPlanner Dec 2015"	=> "/projects/angeliatrinidad/passion-planner-get-one-give-one",
-	//"REconect Notebook"			=> "/projects/273274561/rekonect-notebook-the-magnetic-lifestyle",
-	//"DOO" 						=> "/projects/336837899/my-doo-the-entrepreneurs-journal",
-	//"Scrubby Notebook"			=> "/projects/1071068610/scrubby-notebooks",
-	//"Stylograph"				=> "/projects/oree/stylograph-take-your-ideas-from-paper-to-digital");
-	//"BasicsNotebook"			=> "/projects/1131502390/the-basics-notebook-simplify-and-improve-your-life");
+	"SparkPlanner" 				=> "/projects/katemats/the-spark-planner-achieve-all-your-goals-in-2016",
+	"SparkNotebook"				=> "/projects/katemats/spark-notebook-a-place-for-your-life-plans-and-gre",
+	"PassionPlanner 2013" 		=> "/projects/angeliatrinidad/passion-planner-start-focusing-on-what-really-matt",
+	"PassionPlanner 2014"		=> "/projects/angeliatrinidad/passion-planner-the-one-place-for-all-your-thought",
+	"PassionPlanner Jun 2015"	=> "/projects/angeliatrinidad/passion-planner-the-life-coach-that-fits-in-your-b",
+	"PassionPlanner Dec 2015"	=> "/projects/angeliatrinidad/passion-planner-get-one-give-one",
+	"REconect Notebook"			=> "/projects/273274561/rekonect-notebook-the-magnetic-lifestyle",
+	"DOO" 						=> "/projects/336837899/my-doo-the-entrepreneurs-journal",
+	"Scrubby Notebook"			=> "/projects/1071068610/scrubby-notebooks",
+	"Stylograph"				=> "/projects/oree/stylograph-take-your-ideas-from-paper-to-digital",
+	"BasicsNotebook"			=> "/projects/1131502390/the-basics-notebook-simplify-and-improve-your-life");
 
 $header['project'] = "Project";
 $header['name'] = "Name";
@@ -50,6 +50,9 @@ foreach ($projects as $projectName => $projectURL) {
 	$continueURL = "";
 	$page = 0;
 	$counter = 0;
+
+	echo "\n\n Project: $projectName\n~~~~~~~~~~~~~~~~~~~~\n";
+	
 	do {
 		echo $page++;
 
@@ -77,14 +80,14 @@ foreach ($projects as $projectName => $projectURL) {
 		    if (!in_array($item, $comments)){
 		    	//if ($counter > 50) {return;}
 
-		    	echo "\n ] ".$item['name'];
+		    	//echo "\n ] ".$item['name'];
 		    	if (strcmp($item['picture'], "") !== 0){
-					echo "\n     - picture = ".$item['picture'];
+					//echo "\n     - picture = ".$item['picture'];
 					$resultForPicture = getInfoFromPicture($item['picture']);
 					if ($resultForPicture){
 						foreach ($resultForPicture as $onePictureResult) {
 							if (isset($onePictureResult['twitter'])){
-								$itemSocial['twitter'] = $resultForPicture['twitter'];
+								$itemSocial['twitter'] = $onePictureResult['twitter'];
 							}
 
 							if (isset($onePictureResult['twitter_other'])){
@@ -111,7 +114,7 @@ foreach ($projects as $projectName => $projectURL) {
 		$continueURL = $html->find('.older_comments', 0)->href;
 
 		if (strcmp("", $continueURL) !== 0){
-			echo "\nOlder comments URL: ".$prefix.$continueURL."\n\n";
+			//echo "\nOlder comments URL: ".$prefix.$continueURL."\n\n";
 
 			// Update the url to get
 			$html = file_get_html($prefix.$continueURL);
