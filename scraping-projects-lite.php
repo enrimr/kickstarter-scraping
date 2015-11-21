@@ -4,7 +4,7 @@ include_once("simple_html_dom.php");
 
 $prefix = 'https://www.kickstarter.com';
 
-for ($userId=60000; $userId < 3000000000; $userId++) { 
+for ($userId=191783; $userId < 3000000000; $userId++) { 
 	// Create DOM from URL
 	$continue = true;
 	$page = 1;
