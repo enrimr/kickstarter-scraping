@@ -4,7 +4,11 @@ include_once("simple_html_dom.php");
 
 $prefix = 'https://www.kickstarter.com';
 
-for ($userId=191783; $userId < 3000000000; $userId++) { 
+$init = (isset($argv[1]) && is_numeric($argv[1])) ? $argv[1] : 0;
+$interval = (isset($argv[2]) && is_numeric($argv[2])) ? $argv[2] : 1000000;
+
+echo ">> $init + $interval\n";
+for ($userId=$init; $userId < $init + $interval; $userId++) { 
 	// Create DOM from URL
 	$continue = true;
 	$page = 1;
