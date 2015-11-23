@@ -1,52 +1,85 @@
 <?php
 include_once("simple_html_dom.php");
 
+$prefix = 'https://www.kickstarter.com';
+
 function isRealPicture($pictureIn){
 	$pos = strpos($pictureIn, "missing_user_avatar.png");
 	return $pos !== false;
 }
 
-$prefix = 'https://www.kickstarter.com';
+function pictureWithUserId($html, $userId){
+	$fp = fopen('db-projects-pictures-1.csv', 'a');
 
-$header['name'] = "Project URL";
-$header['users'] = "Backers";
-$header['count'] = "Total backers";
-$projects[] = array();
+	$picture = null;
 
-// Add header to CSV file
-$fp = fopen('database-projects.csv', 'w');
-//fputcsv($fp, $header, ";");
+	if (strcmp($html, "") !== 0) {
+		$picture['userId'] = $userId;
+		$picture['picture'] = urldecode($html->find('.avatar-image',0)->src);
+		fputcsv($fp, $picture, ",");
+	}
 
-for ($userId=0; $userId < 3000000000; $userId++) { 
-	echo "\nUserId: $userId\n";
-	// Create DOM from URL
+	fclose($fp);
+
+	return $picture;
+}
+
+function projectsWithUserId($html, $userId){
+	$page = $html;
+	$backedProjects = null;
 	$continue = true;
-	$page = 1;
+	$pageNumber = 1;
+	$fp = fopen('db-projects-users-1.csv', 'a');
 	do {
 		//echo "\nUserId: $userId - Page: $page\n";
-		$html = file_get_html("$prefix/profile/$userId?page=$page");
-		if (strcmp($html, "") !== 0) {
-
-			foreach ($html->find('.project_item') as $project) {
+		if (strcmp($page, "") !== 0) {
+			foreach ($page->find('.project_item') as $project) {
 				//echo "p ";
-				//echo "\n >> $project->href";
-				$projects[$project->href][] = $userId;
+				$oneProject['userId'] = $userId;
+				$oneProject['name'] = $project->href;
+				$backedProjects[] = $oneProject;
+				fputcsv($fp, $oneProject, ",");
 			}
-			if ($html->find('.no-content') || $page > 40){
+			if ($page->find('.no-content') || $pageNumber > 40){
 				$continue = false;
 			} else {
-				$page++;
+				$pageNumber++;
+				$page = file_get_html("$GLOBALS[prefix]/profile/$userId?page=$pageNumber");
 			}
 		} else {
 			$continue = false;
 		}
 	} while ( $continue );
 
+	fclose($fp);
+
+	return $backedProjects;
 }
 
-foreach ($projects as $key => $value) {
-	$line['project'] = $key;
-	$line['users'] = implode(",", $value);
-    fputcsv($fp, $line, ";");
+function scrapProjectsAndUsers(){
+	$allProjects = array();
+	$pictures = array();
+
+	$handle = fopen("logs/KS_1.log", "r");
+	if ($handle) {
+	    while (($line = fgets($handle)) !== false) {
+	        echo "\nUserId: $line\n";
+	        $userId = trim($line);
+			$htmlDOM = file_get_html("$GLOBALS[prefix]/profile/$userId?page=1");
+
+	        // Get picture
+			$pictures[] = pictureWithUserId($htmlDOM, $userId);
+
+	        // Get Projects
+			$projects = projectsWithUserId($htmlDOM, $userId);
+			if ($projects) {
+				$allProjects = array_merge($allProjects, $projects);
+			}
+	    }
+	    fclose($handle);
+	} else {
+	    // error opening the file.
+	} 
 }
-fclose($fp);
+
+scrapProjectsAndUsers();
