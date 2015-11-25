@@ -1,1 +1,4 @@
-*.csv
+.DS_Store
+logs/finales/
+logs/procesados/
+sandbox/

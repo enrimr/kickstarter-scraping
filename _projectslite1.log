@@ -1,0 +1,686 @@
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60000?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60001?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60002?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60003?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60004?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60005?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60006?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60007?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60008?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60009?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60010?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60011?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60012?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60013?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60014?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60015?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60016?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60017?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60018?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60019?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60020?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60021?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60022?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60023?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60024?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60025?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60026?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60027?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60028?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60029?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60030?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60031?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60032?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60033?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60034?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60035?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60036?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60037?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60038?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60039?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60040?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60041?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60042?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60043?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60044?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60045?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60046?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60047?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60048?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60049?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60050?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60051?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60052?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60053?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60054?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60055?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60056?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60057?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60058?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60059?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60060?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60061?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60062?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60063?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60064?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60065?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60066?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60067?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60068?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60069?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60070?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60071?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60072?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60073?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60074?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60075?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60076?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60077?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60078?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60079?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60080?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60081?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60082?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60083?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60084?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60085?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60086?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60087?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60088?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60089?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60090?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60091?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60092?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60093?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60094?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60095?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60096?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60097?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60098?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60099?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60100?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60101?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60102?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60103?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60104?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60105?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60106?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60107?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60108?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60109?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60110?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60111?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60112?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60113?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60114?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60115?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60116?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60117?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60118?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60119?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60120?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60121?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60122?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60123?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60124?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60125?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60126?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60127?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60128?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60129?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60130?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60131?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60132?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60133?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60134?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60135?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60136?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60137?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60138?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60139?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60140?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60141?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60142?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+UserId: 60143
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60144?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60145?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60146?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60147?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60148?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60149?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60150?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60151?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60152?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60153?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60154?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60155?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60156?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60157?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60158?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60159?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60160?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60161?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60162?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60163?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60164?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60165?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60166?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60167?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60168?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60169?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60170?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60171?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60172?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60173?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60174?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60175?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60176?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60177?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60178?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60179?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60180?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60181?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60182?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60183?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60184?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60185?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60186?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60187?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60188?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60189?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60190?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60191?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60192?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60193?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60194?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60195?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60196?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60197?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60198?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60199?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60200?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60201?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60202?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60203?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60204?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60205?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60206?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60207?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60208?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60209?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60210?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60211?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60212?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60213?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60214?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60215?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60216?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60217?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60218?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60219?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60220?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60221?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60222?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60223?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60224?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60225?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60226?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60227?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
+
+Warning: file_get_contents(https://www.kickstarter.com/profile/60228?page=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/EnriqueMendoza/development/projects/hightrack/kickstarter-scraping/simple_html_dom.php on line 76
