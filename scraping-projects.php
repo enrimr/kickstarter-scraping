@@ -9,7 +9,7 @@ function isRealPicture($pictureIn){
 }
 
 function pictureWithUserId($html, $userId){
-	$fp = fopen('db-projects-pictures-5.csv', 'a');
+	$fp = fopen('db-projects-pictures-7.csv', 'a');
 
 	$picture = null;
 
@@ -29,7 +29,7 @@ function projectsWithUserId($html, $userId){
 	$backedProjects = null;
 	$continue = true;
 	$pageNumber = 1;
-	$fp = fopen('db-projects-users-5.csv', 'a');
+	$fp = fopen('db-projects-users-7.csv', 'a');
 	do {
 		//echo "\nUserId: $userId - Page: $page\n";
 		if (strcmp($page, "") !== 0) {
@@ -60,20 +60,22 @@ function scrapProjectsAndUsers(){
 	$allProjects = array();
 	$pictures = array();
 
-	$handle = fopen("logs/KS_5.log", "r");
+	$handle = fopen("logs/KS_7.log", "r");
 	if ($handle) {
 	    while (($line = fgets($handle)) !== false) {
 	        echo "\nUserId: $line\n";
 	        $userId = trim($line);
-			$htmlDOM = file_get_html("$GLOBALS[prefix]/profile/$userId?page=1");
+	        if (strcmp($userId, "") !== 0){
+				$htmlDOM = file_get_html("$GLOBALS[prefix]/profile/$userId?page=1");
 
-	        // Get picture
-			$pictures[] = pictureWithUserId($htmlDOM, $userId);
+		        // Get picture
+				$pictures[] = pictureWithUserId($htmlDOM, $userId);
 
-	        // Get Projects
-			$projects = projectsWithUserId($htmlDOM, $userId);
-			if ($projects) {
-				$allProjects = array_merge($allProjects, $projects);
+		        // Get Projects
+				$projects = projectsWithUserId($htmlDOM, $userId);
+				if ($projects) {
+					$allProjects = array_merge($allProjects, $projects);
+				}
 			}
 	    }
 	    fclose($handle);

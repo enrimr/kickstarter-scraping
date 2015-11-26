@@ -10,16 +10,16 @@ function isRealPicture($pictureIn){
 $prefix = 'https://www.kickstarter.com';
 
 $projects = array(
-	"SparkPlanner" 				=> "/projects/katemats/the-spark-planner-achieve-all-your-goals-in-2016",
-	"SparkNotebook"				=> "/projects/katemats/spark-notebook-a-place-for-your-life-plans-and-gre",
-	"PassionPlanner 2013" 		=> "/projects/angeliatrinidad/passion-planner-start-focusing-on-what-really-matt",
+	//"SparkPlanner" 				=> "/projects/katemats/the-spark-planner-achieve-all-your-goals-in-2016",
+	//"SparkNotebook"				=> "/projects/katemats/spark-notebook-a-place-for-your-life-plans-and-gre",
+	//"PassionPlanner 2013" 		=> "/projects/angeliatrinidad/passion-planner-start-focusing-on-what-really-matt",
 	"PassionPlanner 2014"		=> "/projects/angeliatrinidad/passion-planner-the-one-place-for-all-your-thought",
-	"PassionPlanner Jun 2015"	=> "/projects/angeliatrinidad/passion-planner-the-life-coach-that-fits-in-your-b",
-	"PassionPlanner Dec 2015"	=> "/projects/angeliatrinidad/passion-planner-get-one-give-one",
-	"REconect Notebook"			=> "/projects/273274561/rekonect-notebook-the-magnetic-lifestyle",
-	"DOO" 						=> "/projects/336837899/my-doo-the-entrepreneurs-journal",
-	"Scrubby Notebook"			=> "/projects/1071068610/scrubby-notebooks",
-	"Stylograph"				=> "/projects/oree/stylograph-take-your-ideas-from-paper-to-digital",
+	//"PassionPlanner Jun 2015"	=> "/projects/angeliatrinidad/passion-planner-the-life-coach-that-fits-in-your-b",
+	//"PassionPlanner Dec 2015"	=> "/projects/angeliatrinidad/passion-planner-get-one-give-one",
+	//"REconect Notebook"			=> "/projects/273274561/rekonect-notebook-the-magnetic-lifestyle",
+	//"DOO" 						=> "/projects/336837899/my-doo-the-entrepreneurs-journal",
+	//"Scrubby Notebook"			=> "/projects/1071068610/scrubby-notebooks",
+	//"Stylograph"				=> "/projects/oree/stylograph-take-your-ideas-from-paper-to-digital",
 	"BasicsNotebook"			=> "/projects/1131502390/the-basics-notebook-simplify-and-improve-your-life");
 
 $header['project'] = "Project";
@@ -54,7 +54,7 @@ foreach ($projects as $projectName => $projectURL) {
 	echo "\n\n Project: $projectName\n~~~~~~~~~~~~~~~~~~~~\n";
 	
 	do {
-		echo $page++;
+		//echo $page++;
 
 		// Find all article blocks
 		foreach($html->find('.comments .comment') as $comment) {
@@ -87,7 +87,7 @@ foreach ($projects as $projectName => $projectURL) {
 					if ($resultForPicture){
 						foreach ($resultForPicture as $onePictureResult) {
 							if (isset($onePictureResult['twitter'])){
-								$itemSocial['twitter'] = $onePictureResult['twitter'];
+								$itemSocial['twitter'] = implode(", ", $onePictureResult['twitter']);
 							}
 
 							if (isset($onePictureResult['twitter_other'])){
@@ -121,7 +121,7 @@ foreach ($projects as $projectName => $projectURL) {
 
 			$continue = true;
 		} else {
-			echo "\nThere are no more comments";
+			//echo "\nThere are no more comments";
 			$continue = false;
 		}
 

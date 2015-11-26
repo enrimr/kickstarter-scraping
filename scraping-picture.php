@@ -135,10 +135,10 @@ function getInfoFromPicture($picture){
 	//$ch = getCurlConfiguration($url, true, $fields, $fields_string);
 
 	$result = curl_exec($ch);
-	//var_dump($result);
+	var_dump($result);
 
 	$http_redirect_url = curl_getinfo($ch, CURLINFO_REDIRECT_URL);
-	//var_dump($http_redirect_url);
+	var_dump($http_redirect_url);
 
 	if ($http_redirect_url){
 		$web = file_get_html($http_redirect_url);
@@ -148,7 +148,7 @@ function getInfoFromPicture($picture){
 	}
 
 	if ($web){
-		echo "\n > > > > > > > PROXY: $proxy\n";
+		//echo "\n > > > > > > > PROXY: $proxy\n";
 		$results = array();
 		foreach ($web->find('.matches div div') as $searchResult) {
 			//echo $searchResult;
@@ -173,7 +173,7 @@ function getInfoFromPicture($picture){
 						$pos = strpos($pContent, "mage: "); // Si buscamos Image: nos da 0 que es === false
 						if ($pos !== false){
 							$userImage = $paragraph->find('a', 0)->title;
-							echo "\nImage: ".$userImage;
+							//echo "\nImage: ".$userImage;
 						} else {
 							// Check if it is a link
 							$pos = strpos($pContent, "age: "); // Si buscamos Image: nos da 0 que es === false
@@ -182,40 +182,27 @@ function getInfoFromPicture($picture){
 								$pages[] = $link;
 
 								if (isTwitterStatus($link)){
-									echo "\n > Status: $link";
+									//echo "\n > Status: $link";
 
 									$twitterProfile = getProfileFromTwitterStatusComment($userImage, $link);
 									if ($twitterProfile){
-										if (!isset($oneResult['twitter'])){
-											$oneResult['twitter'] = "http://twitter.com".$twitterProfile;
-											echo "\n >>>> Twitter User: ".$oneResult['twitter'];
-										} else {
-											$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;
-										}
+										$oneResult['twitter'][] = "http://twitter.com".$twitterProfile;
+										echo "\n >>>> Twitter User: "."http://twitter.com".$twitterProfile;
 									} else {
 										$twitterProfile = getProfileFromTwitterStatusFavorite($userImage, $link);
 										if ($twitterProfile){
-											if (!isset($oneResult['twitter'])){
-												$oneResult['twitter'] = "http://twitter.com".$twitterProfile;
-												echo "\n >>>> Twitter User: ".$oneResult['twitter'];
-											} else {
-												$oneResult['twitter_other'][] = "http://twitter.com".$twitterProfile;
-											}
+											$oneResult['twitter'][] = "http://twitter.com".$twitterProfile;
+											echo "\n >>>> Twitter User: "."http://twitter.com".$twitterProfile;
 										}
 									}
 								} else if (isTwitterProfile($link)){
-									echo "\n > Profile: $link";
+									//echo "\n > Profile: $link";
 									if (isTwitterPictureProfile($userImage, $link)){
-
-										if (!isset($oneResult['twitter'])){
-											$oneResult['twitter'] = $link;
-											echo "\n >>>> Twitter User: ".$oneResult['twitter'];
-										} else {
-											$oneResult['twitter_other'][] = $link;
-										}
+										$oneResult['twitter'][] = $link;
+										echo "\n >>>> Twitter User: ".$link;
 									}
 								} else {
-									echo "\n > Other: $link";
+									//echo "\n > Other: $link";
 								}
 							} 
 						}
@@ -258,12 +245,8 @@ function getInfoFromPicture($picture){
 										$twitterProfile = getOverclockersClubProfileTwitter($profileUrl);
 
 										if ($twitterProfile !== false){
-											if (!isset($oneResult['twitter'])){
-												$oneResult['twitter'] = "http://twitter.com/".trim($twitterProfile);
-												echo "\n >>>> Twitter User: ".$oneResult['twitter'];
-											} else {
-												$oneResult['twitter_other'][] = "http://twitter.com/".trim($twitterProfile);
-											}
+											$oneResult['twitter'][] = "http://twitter.com/".trim($twitterProfile);
+											echo "\n >>>> Twitter User: "."http://twitter.com/".trim($twitterProfile);
 										}
 
 									}
@@ -280,7 +263,7 @@ function getInfoFromPicture($picture){
 			    		$results[] = $oneResult;
 					}
 				} else {
-					echo "\n\n - OTHER TITLE: $title\n";
+					//echo "\n\n - OTHER TITLE: $title\n";
 
 					foreach ($searchResult->find('p') as $paragraph) {
 
@@ -333,5 +316,6 @@ function getInfoFromPicture($picture){
 //https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg
 //$toPrint = getInfoFromPicture("https://pbs.twimg.com/profile_images/584616732083511297/sQuTdMdi_bigger.jpg");
 //$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/1541266/fb_profile_picture.original.jpg?v=1328840454&w=80&h=80&fit=crop&auto=format&q=92&s=85e8a9cfdd9d3e1f0d8253fa3f27f524");
-//echo "\n";
-//print_r($toPrint);
+$toPrint = getInfoFromPicture("https://ksr-ugc.imgix.net/avatars/1894523/image.original.jpg?v=1419038404&w=80&h=80&fit=crop&auto=format&q=92&s=1cad84cbceaa7208a8801a69b2e52a09");
+echo "\n";
+print_r($toPrint);
