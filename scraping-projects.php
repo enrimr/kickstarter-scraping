@@ -9,7 +9,7 @@ function isRealPicture($pictureIn){
 }
 
 function pictureWithUserId($html, $userId){
-	$fp = fopen('db-projects-pictures-7.csv', 'a');
+	$fp = fopen('db-projects-pictures-9.csv', 'a');
 
 	$picture = null;
 
@@ -29,7 +29,7 @@ function projectsWithUserId($html, $userId){
 	$backedProjects = null;
 	$continue = true;
 	$pageNumber = 1;
-	$fp = fopen('db-projects-users-7.csv', 'a');
+	$fp = fopen('db-projects-users-9.csv', 'a');
 	do {
 		//echo "\nUserId: $userId - Page: $page\n";
 		if (strcmp($page, "") !== 0) {
@@ -60,7 +60,7 @@ function scrapProjectsAndUsers(){
 	$allProjects = array();
 	$pictures = array();
 
-	$handle = fopen("logs/KS_7.log", "r");
+	$handle = fopen("logs/KS_9.log", "r");
 	if ($handle) {
 	    while (($line = fgets($handle)) !== false) {
 	        echo "\nUserId: $line\n";
